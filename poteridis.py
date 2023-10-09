@@ -118,14 +118,10 @@ def main():
         #move = input("select move:")
         move = None
         while move is None:
-            # Wait for a key press
             key = kb.read_key()
-
-            # Check if the key is a valid move
             if key in ['w', 'a', 's', 'd', 'q']:
                 move = key
 
-            # Wait for the key to be released
             while kb.is_pressed(key):
                 pass
 
